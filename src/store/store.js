@@ -3,7 +3,7 @@ import { authReducer } from '../reducers/authReducer';
 
 
 const reducers = combineReducers({
-    auh: authReducer
+    auth: authReducer
 })
 
 export const store = createStore(reducers);

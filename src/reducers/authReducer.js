@@ -3,7 +3,7 @@ import { types } from "../types/types";
 /* 
     {
         uid: adfg246,
-        name: 'Fernando
+        name: 'Fernando'
     }
 
 */
@@ -21,6 +21,6 @@ export const authReducer = ( state = {}, action ) => {
             return { }
     
         default:
-            break;
+            return state;
     }
 }
