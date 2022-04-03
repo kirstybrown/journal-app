@@ -44,8 +44,12 @@ export const AppRouter = () => {
   return (
         <Routes>
             <Route 
-                path="/login/*"
-                element={ <AuthRouter /> }
+                path="/*"
+                element={ 
+                    <PublicRoute isAuth={isLoggedIn}>
+                        <AuthRouter />
+                    </PublicRoute>
+                 }
             />
             <Route 
                 path="/"
@@ -54,14 +58,6 @@ export const AppRouter = () => {
                         <JournalScreen />
                     </PrivateRoute> 
                 }
-            />
-            <Route 
-                path="/*"
-                element={ 
-                    <PublicRoute isAuth={isLoggedIn}>
-                        <AuthRouter />
-                    </PublicRoute>
-                 }
             />
         </Routes>   
   )
