@@ -12,11 +12,11 @@ export const AuthRouter = () => {
       <div className='auth__box-container'>
         <Routes>
           <Route
-              path="login"
+              path="auth/login"
               element={ <LoginScreen /> }
           />
           <Route
-              path="register"
+              path="auth/register"
               element={ <RegisterScreen /> }
           />
           <Route
